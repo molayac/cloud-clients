@@ -8,6 +8,7 @@ import * as Chartist from 'chartist';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements OnInit {
     public emailChartType: ChartType;
     public emailChartData: any;

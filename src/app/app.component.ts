@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LocationStrategy, PlatformLocation, Location } from '@angular/common';
+import { AngularFirestore } from 'angularfire2/firestore';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,7 @@ import { LocationStrategy, PlatformLocation, Location } from '@angular/common';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  constructor(public location: Location) { }
+  constructor(public location: Location, db: AngularFirestore) { }
 
   ngOnInit() {
   }

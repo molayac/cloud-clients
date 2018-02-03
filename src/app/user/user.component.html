@@ -1,6 +1,6 @@
 <div class="main-content" >
     <div class="container-fluid">
-        <div class="row">
+        <form class="row" [formGroup]="formularioCliente">
             <div class="col-md-8">
                 <div class="card">
                     <div class="header">
@@ -11,20 +11,13 @@
                             <div class="row">
                                 <div class="col-md-5">
                                     <div class="form-group">
-                                        <label>Compañía (disabled)</label>
-                                        <input type="text" class="form-control" disabled placeholder="Company" value="Creative Code Inc.">
+                                        <label>Compañía: {{empresa.nombre}}</label>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-7">
                                     <div class="form-group">
-                                        <label>Usuario</label>
-                                        <input type="text" class="form-control" placeholder="Username" value="michael23">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Correo Electrónico</label>
-                                        <input type="email" class="form-control" placeholder="Email">
+                                        <label for="correo">Correo Electrónico</label>
+                                        <input id="correo" name="correo" type="email" class="form-control" formControlName='correo'/>
                                     </div>
                                 </div>
                             </div>
@@ -32,14 +25,15 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Nombres</label>
-                                        <input type="text" class="form-control" placeholder="Nombres" value="">
+                                        <label>Nombre</label>
+                                        <input type="text" class="form-control" placeholder="Nombres" formControlName="nombre">
+                                        
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Apellidos</label>
-                                        <input type="text" class="form-control" placeholder="Apellidos" value="">
+                                        <input type="text" class="form-control" placeholder="Apellidos" formControlName="apellido">
                                     </div>
                                 </div>
                             </div>
@@ -48,7 +42,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Dirección</label>
-                                        <input type="text" class="form-control" placeholder="Dirección" value="">
+                                        <input type="text" class="form-control" placeholder="Dirección" formControlName="direccion">
                                     </div>
                                 </div>
                             </div>
@@ -56,14 +50,14 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>Ciudad</label>
-                                        <input type="text" class="form-control" placeholder="Ciudad" value="Mike">
+                                        <label>Celular</label>
+                                        <input type="text" class="form-control" placeholder="3003300" formControlName="celular">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>País</label>
-                                        <input type="text" class="form-control" placeholder="País" value="Colombia" disabled="true">
+                                        <label>Teléfono</label>
+                                        <input type="text" class="form-control" placeholder="País" value="4444141" formControlName="telefono">
                                     </div>
                                 </div>
                             </div>
@@ -102,6 +96,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
 </div>
